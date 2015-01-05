@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+ <title>Blog &ndash; </title>
+
+
+
+
+ <link rel="stylesheet" href="css/pure.css">
+ <link rel="stylesheet" href="css/sweet-alert.css">
+
+ <script src="js/lib/jquery-v1.11.1.js"></script>
+ <script src="js/lib/handlebars-v1.3.0.js"></script>
+ <script src="js/lib/ember-debug-v1.6.0.js"></script>
+ <script src="js/lib/lodash-v2.4.1.js"></script>
+ <script src="js/lib/moment-with-locales-v2.8.3.js"></script>
+ <script src="js/lib/hex_md5.js"></script>
+ <script src="js/lib/jquery.mockjax-v1.5.3.js"></script>
+ <script src="js/lib/sweet-alert.js"></script>
+ <script src="js/lib/waitUntilExists.js"></script>
+
+
+  <!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+  
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+
+    <!--<![endif]-->
+
+
+
+
+  <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/blog.css">
+        <!--<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="js/lib/jQuery.XDomainRequest.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+
+ </head>
+
+ <body>
+
+  <script type="text/x-handlebars">
+
+  {{outlet}}
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="index">
+
+
+  <div id="layout" class="pure-g">
+  <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+  <h1 class="brand-title">A Sample Blog</h1>
+  <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+
+  <nav class="nav">
+  <ul class="nav-list">
+  <li class="nav-item">
+  <a class="pure-button" href="http://purecss.io">Pure</a>
+  </li>
+  <li class="nav-item">
+  <a class="pure-button" href="http://yuilibrary.com">YUI Library</a>
+  </li>
+  </ul>
+  </nav>
+  </div>
+  </div>
+
+
+
+  <div class="content pure-u-1 pure-u-md-3-4">
+  <div>
+
+
+  <!-- Type Here Please -->
+
+  <h2>Welcome to <em class="matched">Ember.js</em></h2>
+  <ul>
+  {{#each item in model}}
+  <li>{{item}}</li>
+  {{/each}}
+  </ul>
+
+
+{{search-elastic stillmore="stillmore" setAllRecord="setAllRecord" cancleEdit="cancleEdit"cancleCreate="cancleCreate" searching="searching" changeQuery="setQuery"}}
+
+
+
+
+
+  <div class="posts">
+  <h1 class="content-subhead">Pinned Post</h1>
+
+
+
+
+{{#if creating}}
+
+<div class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Title</label>
+            {{input value=title id="name" class="pure-input-1-2" type="text" placeholder="Title"}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="password">Url</label>
+            {{input value=url id="password" class="pure-input-1-2" type="text" placeholder="Url"}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="email">Content</label>
+   {{view Ember.TextArea valueBinding="newContent" id="email" class="pure-input-1 create-content"  placeholder="Email Address"}}
+        </div>
+
+
+        <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I have read the terms and conditions
+            </label>
+
+            <button {{action "createPost"}} type="submit" class="pure-button pure-button-primary">Submit</button>
+            <button {{action "cancleCreate"}} type="submit" class="pure-button pure-button-primary">Cancle</button>
+        </div>
+    </fieldset>
+</div>
+
+{{else}}
+    {{#if editing}}
+      {{render "edit" edit}}
+    {{else}}
+      <button {{action "createNew"}}class="button-secondary pure-button floatright">Add New..</button>
+    {{/if}}
+{{/if}}
+
+
+
+
+
+
+{{#if App.Doc.isLoaded}}
+
+ {{#each App.Doc.searchRecord}}
+  {{#with hits.hits}}
+   {{#each}}
+    {{partial "post" }}
+   {{/each}}
+  {{/with}}
+ {{/each}}
+
+ {{addShowMore}}
+
+{{#if stillmore}}
+  {{#if loadingMore}}
+     Loading more...
+  {{else}}
+    <button {{action 'getMore'}} class="button-xlarge  button-secondary pure-button">Get More..</button>
+  {{/if}}
+{{/if}}
+ 
+
+
+{{else}}
+
+ {{#if noresult}}
+     <div class="pure-u-1-1"></div>
+     <h1 style="text-align:center"> Not Result was founded.... </h1>
+ {{/if}}
+
+{{/if}}
+
+
+
+  </div>
+
+
+   
+  <!-- Type Here Please -->
+
+
+
+
+  <div class="footer">
+  <div class="pure-menu pure-menu-horizontal pure-menu-open">
+  <ul>
+  <li><a href="http://purecss.io/">About</a>
+  </li>
+  <li><a href="http://twitter.com/yuilibrary/">Twitter</a>
+  </li>
+  <li><a href="http://github.com/yahoo/pure/">GitHub</a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </script>
+
+
+<script type="text/x-handlebars" id="components/search-elastic">
+
+  <div class="search-box">
+  <div class="pure-form">
+  {{input  autofocus="autofocus" type="text" class="pure-input-rounded" value=search placeholder="Enter your Search" }}
+  <!-- <button type="text" class="pure-button">Search</button> -->
+    {{#if isShowAll}}
+     <button {{action "showAll"}} type="text" class="pure-button pure-button-active">Showing All</button>
+      <button class="pure-button pure-button-disabled">Higlight</button>
+       {{else}}
+     <button {{action "showAll"}} type="text" class="pure-button">Show All</button>
+       {{#if isHighlight}}
+        <button {{action "highlight"}} type="text" class="pure-button pure-button-active">Highlighting</button>
+      {{else}}
+        <button {{action "highlight"}} type="text" class="pure-button">Highlight</button>
+      {{/if}}
+    {{/if}}
+
+
+
+  {{queryElastic}}
+  </div> 
+  </div>
+
+ <br>
+ {{#if search}}
+   Search Result for <em>"{{search}}"</em>
+{{else}}
+  Search Something...
+ {{/if}}
+</script>
+
+
+
+<script type="text/x-handlebars" data-template-name="post">
+  <section {{bind-attr data-index="_index" data-type="_type" data-id="_id" class=":post"}}>
+
+  {{#if App.searching}}
+
+    {{#highlight  _source.title _source.url _source.content }}
+
+  <header class="post-header">
+  <h2 class="post-title">{{{title}}}</h2>
+  <p class="post-meta">
+ Link <a {{bind-attr href="oriurl"}} class="post-author" target="_blank">{{{url}}}</a> 
+  </p>
+
+  </header>
+
+  <div class="post-description toolong">  
+  <p>{{{content}}}</p>
+  </div>
+   <div class="morecontent"></div>
+
+
+  
+  {{/highlight}}
+
+
+  {{else}}
+    <header class="post-header">
+  <h2 class="post-title">{{{_source.title}}}</h2>
+  <p class="post-meta">
+ Link <a {{bind-attr href="_source.url"}} class="post-author" target="_blank">{{{_source.url}}}</a> 
+  </p>
+
+  </header>
+
+  <div class="post-description toolong">
+  <p>{{{_source.content}}}</p>
+  </div>
+  <div class="morecontent"></div>
+  
+  {{/if}}
+
+
+  <button  {{action delete _id}} class="button-small button-warning pure-button" > Delete</button>
+  <button  {{action editPost _source.title _source.url _source.content _id}} class="button-small  pure-button">Edit Post</button>
+
+
+       <button {{action "showmore" _id}}  class="hide show-more-button button-small  pure-button ">Show More</button>
+
+       <button {{action "showless" _id}}  class="hide show-less-button button-small  pure-button ">Show Less</button>
+
+  </section>
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/x-handlebars" data-template-name="edit">
+<div class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+
+
+    {{#each editmodel}}
+    {{/each}}
+
+            <label for="name">Title</label>
+            {{input value=title id="name" class="pure-input-1-2" type="text" placeholder="Title"}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="password">Url</label>
+            {{input value=url id="password" class="pure-input-1-2" type="text" placeholder="Url"}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="email">Content</label>
+   {{view Ember.TextArea valueBinding="editcontent" id="email" class="pure-input-1 create-content"  placeholder="Email Address"}}
+        </div>
+
+
+        <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I have read the terms and conditions
+            </label>
+
+            <button {{action submitEdit id}} type="submit" class="pure-button pure-button-primary">Submit</button>
+            <button {{action cancleEdit}}type="submit" class="pure-button pure-button-primary">Cancle</button>
+        </div>
+    </fieldset>
+</div>
+</script>
+
+
+
+
+
+
+
+
+<!-- <div class="posts">
+  <h1 class="content-subhead">Recent Posts</h1>
+
+  <section class="post">
+  <header class="post-header">
+  <img class="post-avatar" alt="Eric Ferraiuolo&#x27;s avatar" height="48" width="48" src="img/common/ericf-avatar.png">
+
+  <h2 class="post-title">Everything You Need to Know About Grunt</h2>
+
+  <p class="post-meta">
+  By <a class="post-author" href="#">Eric Ferraiuolo</a> under <a class="post-category post-category-js" href="#">JavaScript</a>
+  </p>
+  </header>
+
+  <div class="post-description">
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </p>
+  </div>
+  </section>
+
+  <section class="post">
+  <header class="post-header">
+  <img class="post-avatar" alt="Reid Burke&#x27;s avatar" height="48" width="48" src="img/common/reid-avatar.png">
+
+  <h2 class="post-title">Photos from CSSConf and JSConf</h2>
+
+  <p class="post-meta">
+  By <a class="post-author" href="#">Reid Burke</a> under <a class="post-category" href="#">Uncategorized</a>
+  </p>
+  </header>
+
+  <div class="post-description">
+  <div class="post-images pure-g">
+  <div class="pure-u-1 pure-u-md-1-2">
+  <a href="http://www.flickr.com/photos/uberlife/8915936174/">
+  <img alt="Photo of someone working poolside at a resort" class="pure-img-responsive" src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg"> 
+  </a>
+
+  <div class="post-image-meta">
+  <h3>CSSConf Photos</h3>
+  </div>
+  </div>
+
+  <div class="pure-u-1 pure-u-md-1-2">
+  <a href="http://www.flickr.com/photos/uberlife/8907351301/">
+  <img alt="Photo of the sunset on the beach" class="pure-img-responsive" src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg"> 
+  </a>
+
+  <div class="post-image-meta">
+  <h3>JSConf Photos</h3>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <section class="post">
+  <header class="post-header">
+  <img class="post-avatar" alt="Andrew Wooldridge&#x27;s avatar" height="48" width="48" src="img/common/andrew-avatar.png">
+
+  <h2 class="post-title">YUI 3.10.2 Released</h2>
+
+  <p class="post-meta">
+  By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a>
+  </p>
+  </header>
+
+  <div class="post-description">
+  <p>
+  We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
+  </p>
+  </div>
+  </section>
+  </div> -->
+
+
+
+ </body>
+
+ </html>

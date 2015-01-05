@@ -1,0 +1,11 @@
+show more works
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch noemdata
+# Changes to be committed:
+#	modified:   app/css/style.css
+#	modified:   app/index.html
+#	modified:   app/js/app.js
+#	modified:   app/js/min/app.min.js
+#

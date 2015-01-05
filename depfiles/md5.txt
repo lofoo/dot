@@ -1,0 +1,13 @@
+44097e1462697e1362dbdeca21d0857f *Ghostexp.exe
+376f69f46624a1d4669f4b8755851ce7 *GifCam.exe
+7b354702101f7c88b242347a26d806ff *ctags.exe
+de9b4c28fa29ac0a565e648edccc48f2 *curl.exe
+627929fe0a27c4f2392484dbbe10f731 *ext2explore.exe
+9e87b32ff2fd014a04d1676b69c8df18 *ghost32.exe
+de84d7974136f4f4c21c119b6688f8a1 *hastyscribe.exe
+223c9a13fd8fd70b844bdb6be3ea9200 *jq.exe
+7a8a7e543907fa3c7cf021ed914e8432 *mtputty.exe
+c1a0f6a1e043a9346a3302b5486113ae *peco.exe
+94ad87ac0745f0a9e72b80003ced5e96 *sizeChecker.exe
+27c0d8847cf9c01995d98b859c1ce1a7 *tinytask.exe
+1a6f5bdcfe8749b6d7e2221adfad3abb *youtube-dl.exe

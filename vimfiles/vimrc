@@ -1,0 +1,529 @@
+scriptencoding utf-8
+
+let mapleader = ","         "<Leader>的映射
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_width = 30
+let g:fencview_autodetect = 0
+let g:fencview_auto_patterns='*'
+let g:fencview_checklines = 15
+let bclose_multiple = 1
+
+if has("unix")
+		let MRU_File = expand($HOME) . "/.vim/MRU_RENCENT"
+elseif has("win32")
+		let MRU_File = expand($HOME) . "/vimfiles/MRU_RENCENT"
+endif
+
+redir @z              "定向命令输出到c号寄存器
+source  $VIMRUNTIME/vimrc_example.vim
+
+
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set sw=4 
+set ts=4 
+set ch=2
+set number
+set autoread    "自动读取已经修改的文件
+set guioptions =br   "撕下菜单和工具栏,菜单为+m,工具栏为 +tT
+set nomore      "列表在全屏填满时不暂停
+set cursorline   "设置当前行高亮
+set viminfo+=!   "不知道是干什么的,MarkSave需要这个选项
+set statusline =%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ \ %{&fileencoding}\ \ %P
+set rulerformat=%50(%<%f%h%m%r%=\ %b\ 0x%B\ \ %l,%c%V\ \ %{&fileencoding}\ \ %P%)
+set ambiwidth=double
+set nostartofline
+set ignorecase
+set undofile
+set ts=2
+set shortmess+=T
+
+if has("unix")
+		set backupdir=$HOME/.vim/backupdir
+		set undodir=$HOME/.vim/backupdir
+elseif has("win32")
+		set backupdir=$HOME/vimfiles/backupdir
+		set undodir=$HOME/vimfiles/backupdir
+endif
+
+set tags=tags;
+set wildmenu      
+set wildmode=list,full 
+set completeopt =longest,menuone,menu  
+set tm=180       "映射时下一个字符的超时时间
+set backspace=indent,eol,start
+if has("win32")
+		set diffexpr=MyDiff()
+endif
+"set clipboard =unnamed
+"set autochdir  "自动切换文件的工作目录
+"set cb +=unnamed    "设置默认统一使用*剪切板(系统剪切板)
+"set runtimepath+=$VIM/UltiSnips2.2      UltiSnips2运行目录,已删除
+"set dictionary=$VIM/vim74/dict/_custom.dict,$VIM/vim74/dict/javascript.dict   "设置字典词典目录
+
+
+"-----------如果GUI程序正在运行-----------
+if has ("gui_running")
+set encoding=utf-8   ">_<  比如说,传递参数时候的编码什么的
+language mess en_US.utf8  "尼玛,不用你帮我判断本地语言zh-CN,然后zh_CN.utf-8,我就是要运行英文版的
+endif
+
+if has("unix")
+		set guifont=Ubuntu\ Mono\ 15
+elseif has("win32")
+		set guifont=NSimSun:h11:cANSI 
+endif
+
+"如果直接打开Vim,设置工作目录为临时文件夹
+if  expand("%") == ""
+    if has("unix")
+        cd /tmp
+    elseif has("win32")
+        cd  $TEMP
+    endif
+endif
+
+
+    if has("unix")
+        set directory=/tmp
+    elseif has("win32")
+        set directory=$TEMP
+    endif
+
+"-----------标签的支持-----------
+if    $OpenedByName == "VisualStuio" 
+				"\({.*\)\@<=}.*\(;\)\@=
+				set cmdheight=3
+				set foldmethod=expr
+				set foldtext=
+				set foldlevel=1
+				set foldexpr=getline(v:lnum)=~'^\\s*{\\(.*}\\)\\@!'?'a1':getline(v:lnum)=~'^\\s*}'?'s1':'='
+endif
+
+
+"Mappings to move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+nnoremap k gk
+nnoremap j gj
+
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"nmap <A-q> i<C-r>+<Esc>
+nmap <C-n> :bn<CR>
+nmap <C-p> :bp<CR>
+nmap <C-s>  :w<CR>
+nmap yl  ^vg_"+y 
+nmap yal :1,$y+<CR>
+nmap cl ^vg_<C-C>
+nmap <silent> <F6> :TagbarToggle<CR>         
+nmap	 <C-\> <C-w>+   
+nmap	 <C-_> <C-w>-  
+nmap	 <M-\> <C-w>>   
+nmap	 <M--> <C-w><  
+nmap   cu : call ClearUndo()<CR>
+nmap   <F7> :diffthis<CR>
+nmap	 <F8>  :FencAutoDetect<CR> 
+nmap <F5> :call Restart()<CR>
+"nmap   <S-p> :echo expand('%:p')<CR>
+
+vmap <C-C> "+y
+"vmap <M-j> :call SelectBlockDown()<CR>
+"vmap <M-k> :call SelectBlockUp()<CR>
+
+cmap gj -1s/\(\s*\n\)\_^\s*//g
+"cmap <C-r>  <C-f>/
+
+map <M-l> :silent! exec  '!start "' . g:CurrentOpenFileName_ANSI . '"'<CR>
+map <M-n> :nohl<CR>
+map	 <F2>  :MRU<CR>
+map	 <F3>  :tabe<CR>:NERDTree<CR><C-w>l<C-w>c
+map	 <F4>  :cw<CR><C-w>j
+map	 <S-F4>  :ccl<CR>
+map	 <F9>  :ToggleSlash<CR>
+map	 <F10>  :FencAutoDetect<CR> 
+map	   <M-m> /^\(\(\(.\{-}\(\/\*.\{-}\*\/\)\)\{0,1}\s*\(#\\|else\\|for\\|if\\|while\\|do\\|\s*\*\\|\s*\/\*\)\)\\|\s*\/\/\)\@!.\{-}\<\w\{-}\>\s\{-}\*\{-}\(::\\|::\~\)*\_s*\<.*.*\>\([^;:]\{-}\n\)\{-0,2}.*(\([^;]*\n\)\{-0,5}.*{<C-f>50<Left>i<C-c>a<BS>
+"map  <F11>  :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
+
+imap <C-s>  <Esc>:w<CR>a
+"imap <A-q> <C-r>+
+
+"inoremap <C-h> <Left>
+"inoremap <C-j> <Down>
+"inoremap <C-k> <Up>
+"inoremap <C-l> <Right>
+				
+
+command! -bang -range ToggleSlash <line1>,<line2>call ToggleSlash(<bang>1)
+
+filetype plugin indent on     " required!
+
+ " let g:preColorSchema = "zellner"
+ " if '&filetype' =='' | colo  customer_default | endif
+ " if '&filetype'!= '' | colo  darkyellow       | endif
+
+autocmd BufEnter    *  set formatoptions=ql    "决定你按O插入后的排版方式,相关命令paste
+autocmd BufEnter    *  cd %:p:h    
+autocmd BufRead     *.txt setlocal ft=txt
+au GUIEnter * set visualbell t_vb=  "进入Gvim的GUI后,取消错误可视响铃
+"au FocusLost * silent! :wa   "当vim失去焦点时,自动保存文件
+"au FileType javascript set makeprg=$VIM/vim74/plugin/javascriptlint/jsl -nologo -nofilelisting -nosummary -nocontext -conf '$VIM/vim74/plugin/javascriptlint/jsl.default.conf' -process %
+"au FileType javascript set errorformat=%f(%l): %m
+"au FileType javascript inoremap <silent> <F9> <C-O>:make<CR>
+"au FileType javascript map <silent> <F9> :make<CR>
+"au FileType javascript setlocal dictionary+=$VIM/vim74/dict/_custom.dict,$VIM/vim74/dict/javascript.dict  "javascript字典词典
+"au FileType php setlocal dictionary+=$VIM/vim74/dict/_custom.dict,$VIM/vim74/dict/php_funclist.dict  "php字典词典
+"au BufLeave    *  colo slate
+"au CmdwinEnter *  let g:PreColorSchem = g:colors_name
+"au CmdwinLeave *  call SetPreColorScheme()
+"au BufEnter    *  if &filetype!=""  |  colo slate  | call ExtractExecUserCmd() | source $VIMRUNTIME/plugin/mark.vim | endif 
+
+function! MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase'  | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+"睡眠函数
+function! Sleepfunc(SleepTime)
+				let SleepTime_arg = a:SleepTime
+				exec 'sleep ' . SleepTime_arg . 'm' 
+endfunction
+
+"保存之前的配色到g:preColorSchema
+function! SetPreColorScheme()
+			 let arg1 = g:PreColorSchem
+			 execute 'colo' arg1
+endfunction
+
+"清除之前的Undo
+function! ClearUndo()
+				let old_undolevels = &undolevels
+				set undolevels=-1
+				exe "normal a \<BS>\<Esc>"
+				let &undolevels = old_undolevels
+				unlet old_undolevels
+endfunction
+
+"过滤--->只显示正则表达式匹配的字符串
+function! ShowCertainText(CertainText) 
+				let arg1 = a:CertainText
+				exec  '%s/\(\%^\_.\{-}\ze\('.arg1.'\)\)\|\(\('.arg1.'\)\@<=\_.\{-}\('.arg1.'\)\@=\)\|\(\('.arg1.'\)\zs\(\('.arg1.'\)\@!\_.\)*\%$\)/\r/g'
+endfunction
+
+"向下快速区块选择(相同类似区块)
+function!  SelectBlockDown()
+				while  match(getline(line('.')+1),expand("<cword>"))+1>0 
+								normal gvj
+				endwhile
+endfunction
+
+"向上快速区块选择(相同类似区块) 
+function!  SelectBlockUp()
+				while  match(getline(line('.')-1),expand("<cword>"))+1>0 
+								normal gvk
+				endwhile
+endfunction
+
+
+if has("unix")
+
+elseif has("win32")
+		"重新启动Vim,加载当前文件
+		function! Restart()
+				let g:CurrentOpenFileName_ANSI = expand("%")      "文件名,编码是根据ANSI
+				silent! exec  "!start \"" .$VIM. "\\vim74\\gvim.exe\" \"" . g:CurrentOpenFileName_ANSI . "\"" 
+				q!
+		endfunction
+
+		"重新启动Vim,加载所有Buffer
+		function! BufferRestart()
+				let g:BufferRestartFiles_ANSI=""
+
+				bufdo!  let g:CurrentOpenFileName_ANSI = expand("%:p")  | let g:BufferRestartFiles_ANSI .= "\"" . g:CurrentOpenFileName_ANSI . "\" " 
+				silent! exec  "!start \"" .$VIM. "\\vim74\\gvim.exe\" " . g:BufferRestartFiles_ANSI 
+				q!
+		endfunction
+endif
+
+"Buffer查找字符
+function! BufferNextmatch()
+  let v:errmsg = "X"
+  let s:x = bufnr("%")
+  while v:errmsg != ""
+    bnext
+    if bufnr("%") == s:x
+      break
+    endif
+    1
+    let v:errmsg = ""
+    silent! /
+  endwhile
+endfunction
+
+
+function! Fortest(cycle_num)
+				let cycle_num_var = a:cycle_num
+   for  cycle_value  in  range(cycle_num_var)
+					 let cycle_value+=1
+					 exec 'ec("'.cycle_value.'")'
+	 endfor
+endfunction
+
+"运行两个[VimScriptInfo]字段中的内容
+function! ExtractExecUserCmd()
+				let OpenFileName = expand("%")
+				let OpenFileName = substitute(OpenFileName,".*\\","","")
+				if OpenFileName != "_vimrc"
+								normal gg
+								let Command_UnFilter = getline(search("\\[VimScriptInfo\\]",'n')+1,search("\\[VimScriptInfo\\]",'nb')-1)
+
+								for  Cycle_ListItem  in  Command_UnFilter
+												let Cycle_ListItem = substitute(Cycle_ListItem,"\\(^\\s*\\/\\*\\)\\|\\(\\*\\/\\s*$\\)\\|\\(^\\s*rem\\)\\|\\(^\\s*\"\\)\\|\\(^\\s*\\/\\/\\)","","g")   
+												exec Cycle_ListItem
+								endfor
+								normal ``
+				endif
+endfunction
+
+
+"添加自定义的高亮语法,1.KeyWord模式  2.Match匹配模式
+function! AddCustomHilightByGPName(Mode,SearchString,GroupName) 
+			let CurrentTime = localtime()
+			let SearchString_Ori =  substitute(a:SearchString,"%\\|&\\|)","\\\\&","g") "\\-->'\' || \\&--->\&    
+			if  a:Mode == 1
+							:0		
+							?\[VimScriptInfo\]
+							exec 		'normal Osyn keyword ' . CurrentTime . ' '  SearchString_Ori 			
+			else
+							:0		
+																			?\[VimScriptInfo\]
+							exec 	'normal Osyn match ' .  CurrentTime . ' "' .  SearchString_Ori . '"'			
+			endif
+			:0		
+			?\[VimScriptInfo\]
+			exec 'normal Ohi link ' . CurrentTime . ' '   a:GroupName   
+
+endfunction
+
+
+
+function! Merge_drakon()   " --merge
+    let i=5000
+
+    for  i_value  in  range(i)
+
+        let pre_run_comm = 'normal /--merge\_.\{-}\zs\_^\s*\/\/indi-' .i_value. '\>\_.\{-}\/\/indi-' .i_value . '
+'
+        silent execute  pre_run_comm
+        silent execute "normal nn\<S-v>//e\<cr>\"ad"
+
+        let pre_run_comm ='%s/\_^\s*\/\/indi-' . i_value . '\>\_.\{-}\/\/indi-' . i_value . '\ze\_.\{-}--merge/\=getreg(''a'')/ge'
+        silent execute pre_run_comm
+
+    endfor
+endfunction
+
+function! Merge_sub_cus()   " --merge
+    let i=4000
+
+    for  i_value  in  range(i)
+
+        let pre_run_comm = 'normal /--merge\_.\{-}' .i_value. '\>\n\zs\_.\{-}\ze\_^' .expand(i_value+1). '\>
+'
+        silent execute  pre_run_comm
+        silent execute "normal nn\<S-v>//e\<cr>\"ad"
+
+        let pre_run_comm ='%s/^'. i_value . '\>\n.*\n\zs\_.\{-}\ze\_^' . expand(i_value+1) . '\>\_.\{-}--merge/\=getreg(''a'')/ge'
+        silent execute pre_run_comm
+
+    endfor
+endfunction
+
+
+function! Append_sub_cus()   " --merge
+    let i=2000
+
+    for  i_value  in  range(i)
+
+        let pre_run_comm = 'normal /--merge\_.\{-}\_^' .i_value. '\>\n.*\n\zs\_.\{-}\ze\_^' .expand(i_value+1). '\>
+'
+        silent execute  pre_run_comm
+        silent execute "normal nn\<S-v>//e\<cr>\"ad"
+
+        let pre_run_comm ='%s/^'. i_value . '\>\n.*\n\_.\{-}\zs\_^\s*\n\ze\_^' . expand(i_value+1) . '\>\_.\{-}--merge/\=getreg(''a'')/ge'
+        silent execute pre_run_comm
+
+    endfor
+endfunction
+
+function! Read_file_toSection()   " ---\d---start ---\d---end   Extension:txt
+    let i=500
+
+    for  i_value  in  range(i)
+
+        let pre_run_comm = 'normal o---' .expand(i_value+1).     '---start
+'
+        silent execute  pre_run_comm
+        silent execute "normal \<Esc>"
+
+        silent execute 'r ' . expand(i_value+1) . '.txt ' 
+        silent execute "normal G"
+
+        let pre_run_comm = 'normal o---' .expand(i_value+1).     '---end
+'
+        silent execute  pre_run_comm
+        silent execute "normal \<Esc>"
+
+    endfor
+endfunction
+
+function! Sav_file_toSection()   " ---\d---start ---\d---end   Extension:txt
+    let i=51
+
+    for  i_value  in  range(i)
+
+        let pre_run_comm = 'normal /---' . expand(i_value+1) .'---start\s*\n\zs\_.\{-}\ze\_^---' . expand(i_value+1) .   '---end
+'
+        silent execute  pre_run_comm
+
+        silent execute "normal nn\<S-v>//e\<cr> :w! " .expand(i_value+1). ".txt\<cr>"
+
+    endfor
+endfunction
+
+"Toggle slashes in the current line, or a range of lines.
+function! ToggleSlash(independent) range
+  let from = ''
+  for lnum in range(a:firstline, a:lastline)
+    let line = getline(lnum)
+    let first = matchstr(line, '[/\\]')
+    if !empty(first)
+      if a:independent || empty(from)
+        let from = first
+      endif
+      let opposite = (from == '/' ? '\' : '/')
+      call setline(lnum, substitute(line, from, opposite, 'g'))
+    endif
+  endfor
+endfunction
+
+"命令行中的d删除到指定行      ?gpgsa?,.d  好尼玛深奥  
+
+
+
+"Get Alt key to work in terminal
+if has("unix")
+let c='a'
+while c <= 'z'
+		exec "set <A-".c.">=\e".c
+		exec "imap s\e".c." <A-".c.">"
+		let c = nr2char(1+char2nr(c))
+endwhile
+set timeout ttimeoutlen=50
+endif
+
+"Keep Vim reload out of box
+augroup checktime
+		au!
+		if !has("gui_running")
+				"silent! necessary otherwise throws errors when using command
+				"line window.
+				autocmd BufEnter        * silent! checktime
+				autocmd CursorHold      * silent! checktime
+				autocmd CursorHoldI     * silent! checktime
+				"these two _may_ slow things down. Remove if they do.
+				autocmd CursorMoved     * silent! checktime
+				autocmd CursorMovedI    * silent! checktime
+		endif
+augroup END
+
+
+
+
+
+"Vundle的安装配置 filetype off                   " required!
+
+if has("unix")
+ set rtp+=$HOME/.vim/bundle/vundle
+ call vundle#rc("$HOME/.vim/bundle/plugins")
+elseif has("win32")
+ set rtp+=$HOME/vimfiles/bundle/vundle
+ call vundle#rc("$HOME/vimfiles/bundle/plugins")
+endif
+
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" original repos on github
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-surround'
+Bundle 'claco/jasmine.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'yegappan/mru'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'junegunn/vim-easy-align'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'tpope/vim-rails.git'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Valloric/YouCompleteMe'
+
+" vim-scripts repos
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+Bundle 'VisIncr'
+
+" non github repos
+"Bundle 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (ie. when working on your own plugin)
+Bundle 'ttex-bacth-gen'
+Bundle 'txtbrowser'
+" ...
+
+execute pathogen#infect()
+
+if has('gui_running')
+		syntax enable
+		set background=dark
+		colorscheme solarized
+endif
+
+
+"docx2txt
+autocmd BufReadPre *.docx set ro
+autocmd BufReadPost *.docx %!docx2txt.pl 
+
+"txtbroswer
+syntax on "syntax highlighting on 
+filetype plugin on 
+au BufEnter *.txt setlocal ft=txt

@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 7198ae2584c813138e977a8396aaf269d5a32d26 Your Name <you@example.com> 1413359381 +0800	commit (initial): Initial commit
+7198ae2584c813138e977a8396aaf269d5a32d26 b59b720d0f84f332081719dd31cbe9d54a845318 Your Name <you@example.com> 1413360606 +0800	commit: play around
+b59b720d0f84f332081719dd31cbe9d54a845318 a35b3d1e61e29aad456db8f3317f3439e1d967e0 Your Name <you@example.com> 1413361428 +0800	commit (amend): play around
+a35b3d1e61e29aad456db8f3317f3439e1d967e0 d9712f6990a82c48c7bc23f839ff26e016ee433d Your Name <you@example.com> 1413367617 +0800	commit: main page
+d9712f6990a82c48c7bc23f839ff26e016ee433d f1b4bd4fac94e1e681813203c51fff5d3d5946de Your Name <you@example.com> 1413369599 +0800	commit: using Search Commpent
+f1b4bd4fac94e1e681813203c51fff5d3d5946de 18e090ffe482039ae4980355ecee7dbd7b6cc2a0 Your Name <you@example.com> 1413385246 +0800	commit: try adapter
+18e090ffe482039ae4980355ecee7dbd7b6cc2a0 0b401e75cde139934812d70958771bf440eb63f6 Your Name <you@example.com> 1413387702 +0800	commit: component ---> Controller
+0b401e75cde139934812d70958771bf440eb63f6 a444312f41df01a78a3912250401bcb588221a01 Your Name <you@example.com> 1413388032 +0800	commit (amend): component ---> Controller
+a444312f41df01a78a3912250401bcb588221a01 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413388371 +0800	commit (amend): component ---> Controller
+3deab27f573b643e434b16970497857b38de520c 9c2e6ef8da12e701dbfbea6b5de5057ea34a1f18 Your Name <you@example.com> 1413422651 +0800	commit: setup Ember Restless
+9c2e6ef8da12e701dbfbea6b5de5057ea34a1f18 bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413422691 +0800	commit (amend): setup Ember Restless
+bf23322b824c068ad3e00c9805f783fb526f36aa bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413426586 +0800	Branch: renamed refs/heads/master to refs/heads/emrl

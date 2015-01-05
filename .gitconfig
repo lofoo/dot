@@ -1,0 +1,150 @@
+[user]
+	name = me
+	email = me@pc.com
+
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+
+#######Must Have Git Aliases#######
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+#List commits showing changed files is invoked 
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+#List with no colors if you need to chain the out put with Unix pipes
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+
+#List oneline commits showing dates
+lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+#List oneline commits showing relative dates:
+ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+
+#And closing the listing aliases, here is the default look for short git log
+le = log --oneline --decorate
+
+#Show the history of a file, with diffs
+filelog = log -u
+fl = log -u
+
+#Log commands to inspect (recent) history
+dl = "!git ll -1"
+
+#Show a diff last commit:
+dlc = diff --cached HEAD^
+
+#Show content (full diff) of a commit given a revision
+dr  = "!f() { git diff "$1"^.."$1"; }; f"
+lc  = "!f() { git ll "$1"^.."$1"; }; f"
+diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+#Find a file path in codebase:
+f = "!git ls-files | grep -i"
+
+#Search/grep your entire codebase for a string
+grep = grep -Ii
+gr = grep -Ii
+
+#Grep from root folder
+gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+#Going meta: List all your Aliases (la)
+la = "!git config -l | grep alias | cut -c 7-"
+
+#Rename [branch] to done-[branch]
+done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+
+#Assume a file as unchanged
+assume = update-index --assume-unchanged
+
+#Unassume a file
+unassume = update-index --no-assume-unchanged
+
+#Show assumed files
+assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+
+#Unassume all the assumed files
+unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+
+#Assume all
+assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+
+#Show the last tag
+lasttag = describe --tags --abbrev=0
+lt = describe --tags --abbrev=0
+
+#Merge aliases
+ours = "!f() { git co --ours $@ && git add $@; }; f"
+theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+
+#Bonus: Basic Shortcuts
+cp = cherry-pick
+st = status -s
+cl = clone
+ci = commit
+co = checkout
+br = branch 
+diff = diff --word-diff
+dc = diff --cached
+
+#Reset Commands
+r = reset
+r1 = reset HEAD^
+r2 = reset HEAD^^
+rh = reset --hard
+rh1 = reset HEAD^ --hard
+rh2 = reset HEAD^^ --hard
+
+#Git-svn shortcuts
+svnr = svn rebase
+svnd = svn dcommit
+svnl = svn log --oneline --show-commit
+
+#Stash operations
+sl = stash list
+sa = stash apply
+ss = stash save
+
+
+#######Git tips from the trenches#######
+ds = diff --staged      # git ds - diff your staged changes == review before committing.
+st = status -sb         # smarter status - include tag and branch info
+fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>  # I know what you did yesterday - great for follow-ups
+ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short  # pretty one-line log with tags, branches and authors
+lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat    # a verbose ls, shows changed files too
+
+# some resets without explanation
+r = reset
+r1 = reset HEAD^
+r2 = reset HEAD^^
+rh = reset --hard
+rh1 = reset HEAD^ --hard
+rh2 = reset HEAD^^ --hard
+
+# basic shortcuts
+cp = cherry-pick
+cl = clone
+ci = commit
+co = checkout
+br = branch 
+diff = diff --word-diff
+dc = diff --cached
+
+# stash shortcuts
+sl = stash list
+sa = stash apply
+ss = stash save
+
+# log related - thanks to @mwd410
+l = log 
+lh = log --graph
+la = !git lh --date-order --all 2> /dev/null
+lb = log --graph --simplify-by-decoration
+lba = !git lb --all 
+h = !git --no-pager log --graph -n 15
+a = !git --no-pager la -n 15
+[core]
+    fileMode = false
+	autocrlf = false

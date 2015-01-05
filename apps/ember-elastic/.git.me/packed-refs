@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled 
+c744ab0de2277946cf3af426fda50d661d6143cd refs/heads/emdata
+bf23322b824c068ad3e00c9805f783fb526f36aa refs/heads/emrl
+00c5eac8433d0a1070f75bbd1f8c53c68277ca01 refs/heads/noemdata

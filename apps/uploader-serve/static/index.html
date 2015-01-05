@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="dropzone.js"></script>
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/dropzone.css">
+	<meta charset="UTF-8">
+	<title>DropZone</title>
+    <style type="text/css" media="all">
+    .link-to {
+     text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+
+<div id="dropzone">
+  <form action="http://192.168.1.101:1020/api/upload" class="dropzone dz-clickable" id="demo-upload">
+    <div class="dz-default dz-message"><span>Drop files here to upload</span>
+    </div>
+  </form>
+</div>
+
+<h1 class='link-to'>
+<a href="/file">List File</a>
+</h1>
+ 
+ <script>
+Dropzone.options.demoUpload = {
+  maxFilesize: 10000000
+};
+ </script>
+</body>
+</html>

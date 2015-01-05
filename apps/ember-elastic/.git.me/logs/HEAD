@@ -1,0 +1,78 @@
+0000000000000000000000000000000000000000 7198ae2584c813138e977a8396aaf269d5a32d26 Your Name <you@example.com> 1413359381 +0800	commit (initial): Initial commit
+7198ae2584c813138e977a8396aaf269d5a32d26 b59b720d0f84f332081719dd31cbe9d54a845318 Your Name <you@example.com> 1413360606 +0800	commit: play around
+b59b720d0f84f332081719dd31cbe9d54a845318 a35b3d1e61e29aad456db8f3317f3439e1d967e0 Your Name <you@example.com> 1413361428 +0800	commit (amend): play around
+a35b3d1e61e29aad456db8f3317f3439e1d967e0 d9712f6990a82c48c7bc23f839ff26e016ee433d Your Name <you@example.com> 1413367617 +0800	commit: main page
+d9712f6990a82c48c7bc23f839ff26e016ee433d f1b4bd4fac94e1e681813203c51fff5d3d5946de Your Name <you@example.com> 1413369599 +0800	commit: using Search Commpent
+f1b4bd4fac94e1e681813203c51fff5d3d5946de 18e090ffe482039ae4980355ecee7dbd7b6cc2a0 Your Name <you@example.com> 1413385246 +0800	commit: try adapter
+18e090ffe482039ae4980355ecee7dbd7b6cc2a0 0b401e75cde139934812d70958771bf440eb63f6 Your Name <you@example.com> 1413387702 +0800	commit: component ---> Controller
+0b401e75cde139934812d70958771bf440eb63f6 a444312f41df01a78a3912250401bcb588221a01 Your Name <you@example.com> 1413388032 +0800	commit (amend): component ---> Controller
+a444312f41df01a78a3912250401bcb588221a01 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413388371 +0800	commit (amend): component ---> Controller
+3deab27f573b643e434b16970497857b38de520c 9c2e6ef8da12e701dbfbea6b5de5057ea34a1f18 Your Name <you@example.com> 1413422651 +0800	commit: setup Ember Restless
+9c2e6ef8da12e701dbfbea6b5de5057ea34a1f18 bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413422691 +0800	commit (amend): setup Ember Restless
+bf23322b824c068ad3e00c9805f783fb526f36aa 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413426419 +0800	checkout: moving from master to 3dea
+3deab27f573b643e434b16970497857b38de520c 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413426430 +0800	checkout: moving from 3deab27f573b643e434b16970497857b38de520c to emdata
+3deab27f573b643e434b16970497857b38de520c bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413426474 +0800	checkout: moving from emdata to bf23
+bf23322b824c068ad3e00c9805f783fb526f36aa bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413426584 +0800	checkout: moving from bf23322b824c068ad3e00c9805f783fb526f36aa to master
+bf23322b824c068ad3e00c9805f783fb526f36aa 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413426596 +0800	checkout: moving from emrl to emdata
+3deab27f573b643e434b16970497857b38de520c bf23322b824c068ad3e00c9805f783fb526f36aa Your Name <you@example.com> 1413426775 +0800	checkout: moving from emdata to bf23
+bf23322b824c068ad3e00c9805f783fb526f36aa 3deab27f573b643e434b16970497857b38de520c Your Name <you@example.com> 1413426799 +0800	checkout: moving from bf23322b824c068ad3e00c9805f783fb526f36aa to emdata
+3deab27f573b643e434b16970497857b38de520c e85dc0977ca33270941ec1066ced845829ec61ea Your Name <you@example.com> 1413426876 +0800	commit: using Ember-data again
+e85dc0977ca33270941ec1066ced845829ec61ea c744ab0de2277946cf3af426fda50d661d6143cd Your Name <you@example.com> 1413428859 +0800	commit: using mockjax
+c744ab0de2277946cf3af426fda50d661d6143cd c744ab0de2277946cf3af426fda50d661d6143cd Your Name <you@example.com> 1413431188 +0800	checkout: moving from emdata to noemdata
+c744ab0de2277946cf3af426fda50d661d6143cd ca48d90878f43b3666c7a7b5b36d49d6a34cd1a7 Your Name <you@example.com> 1413431211 +0800	commit: fxck... Ember data is hard to use
+ca48d90878f43b3666c7a7b5b36d49d6a34cd1a7 18c165b93cc5ab2bedff05fb937a0aafa0e814a7 Your Name <you@example.com> 1413434754 +0800	commit: Protoye my self
+18c165b93cc5ab2bedff05fb937a0aafa0e814a7 3f4f1a340aaaded515d76114e4208cfbe45483da Your Name <you@example.com> 1413440744 +0800	commit: sweet Alert and My-RL-data
+3f4f1a340aaaded515d76114e4208cfbe45483da d2f62481433200023a011907c1592fa64b26376e Your Name <you@example.com> 1413442143 +0800	commit (amend): sweet Alert and My-RL-data
+d2f62481433200023a011907c1592fa64b26376e c5d0ef51abfb89a58df6a055dc31d6c0ca4c3efb Your Name <you@example.com> 1413445239 +0800	commit: query search
+c5d0ef51abfb89a58df6a055dc31d6c0ca4c3efb 7de261e5992e9ab0a2b12d06e51b83a2731bcda2 Your Name <you@example.com> 1413447605 +0800	commit (amend): query search
+7de261e5992e9ab0a2b12d06e51b83a2731bcda2 992c1a318dc8ba72397b7516e20c413d01e70b2c Your Name <you@example.com> 1413448626 +0800	commit (amend): query search
+992c1a318dc8ba72397b7516e20c413d01e70b2c 5b8d458ed21f4689cbacdb84de354b93ac1457d2 Your Name <you@example.com> 1413451080 +0800	commit (amend): query search
+5b8d458ed21f4689cbacdb84de354b93ac1457d2 62fa958135a6727bcfec700e2d3e2f4673757344 Your Name <you@example.com> 1413451327 +0800	commit (amend): query search
+62fa958135a6727bcfec700e2d3e2f4673757344 e6243fb37c7bc05cd4769edebd7824e25a9b8aac Your Name <you@example.com> 1413453109 +0800	commit: ading create new
+e6243fb37c7bc05cd4769edebd7824e25a9b8aac f17509179b54e102c4abf6f2356a27bf30203b29 Your Name <you@example.com> 1413455499 +0800	commit: woring on pushrecord
+f17509179b54e102c4abf6f2356a27bf30203b29 fd0ba638160448bedd32caf029a030ee13c7aa24 Your Name <you@example.com> 1413459802 +0800	commit: working onit v2
+fd0ba638160448bedd32caf029a030ee13c7aa24 a44594cae5cc9de1f81d5a668c5cbbf9d7456702 Your Name <you@example.com> 1413463073 +0800	commit: working onit v3
+a44594cae5cc9de1f81d5a668c5cbbf9d7456702 c703429e1b1659f480afae0b39a2eeaf411d03db Your Name <you@example.com> 1413463795 +0800	commit: delete confirm
+c703429e1b1659f480afae0b39a2eeaf411d03db e532b2f7dbb9f13ae0f5985fe8f6a16be1222d20 Your Name <you@example.com> 1413467988 +0800	commit: amost there
+e532b2f7dbb9f13ae0f5985fe8f6a16be1222d20 4bc06954347ab31062f516edb313806b6b23ad2e Your Name <you@example.com> 1413469224 +0800	commit: fix 10 problem
+4bc06954347ab31062f516edb313806b6b23ad2e 6cb7c0dc6fc455f5a0c54b4741d6b690fd8696e0 Your Name <you@example.com> 1413479490 +0800	commit: awesome highlight
+6cb7c0dc6fc455f5a0c54b4741d6b690fd8696e0 8084bd498f9f762a7f2473093898686b1b985e5d Your Name <you@example.com> 1413485368 +0800	commit: awesome highlight - working
+8084bd498f9f762a7f2473093898686b1b985e5d 5c5ff186faedb7119f269fe8c09c386a8c4e3543 Your Name <you@example.com> 1413490046 +0800	commit: change post to create--later amend
+5c5ff186faedb7119f269fe8c09c386a8c4e3543 9675d4ae834f2152d49c5b8dae4d2a906d20c94a Your Name <you@example.com> 1413492985 +0800	commit: change post to create--later amend---
+9675d4ae834f2152d49c5b8dae4d2a906d20c94a afb865bab08235bb14e9b3aa78fb2eb2ca28110a Your Name <you@example.com> 1413493864 +0800	commit: change post to create--later amend-
+afb865bab08235bb14e9b3aa78fb2eb2ca28110a 64af864dccfa74cb67abc0aad6f17ac9f8d8c22c Your Name <you@example.com> 1413493897 +0800	commit: change post to create--later amend-~~~
+64af864dccfa74cb67abc0aad6f17ac9f8d8c22c b97acd1e17bdd1f0345ee1196813d0fd1f30405b Your Name <you@example.com> 1413516990 +0800	commit: amend later.........
+b97acd1e17bdd1f0345ee1196813d0fd1f30405b 20247b7861757ff4b8d2a808d7ff80eee3e5794d Your Name <you@example.com> 1413531905 +0800	commit: working on edit..
+20247b7861757ff4b8d2a808d7ff80eee3e5794d 73f8b132475f132106e6a5b2d54cb33e21f8a5f3 Your Name <you@example.com> 1413534664 +0800	commit: working on edit..ss
+73f8b132475f132106e6a5b2d54cb33e21f8a5f3 999d5dbe767928d609ff83f9d2cdfcb69d4f3655 Your Name <you@example.com> 1413536009 +0800	commit: working on edit..sspp
+999d5dbe767928d609ff83f9d2cdfcb69d4f3655 6a8530e6729fbd6acaf2fafc9d8596b426aab8eb Your Name <you@example.com> 1413538204 +0800	commit: working on edit..ssppsss
+6a8530e6729fbd6acaf2fafc9d8596b426aab8eb 16fa6549051aecdf90f9223453c00e18e341b7fa Your Name <you@example.com> 1413540628 +0800	commit: later....
+16fa6549051aecdf90f9223453c00e18e341b7fa 91eb404f5f6333ff4c8189b9d6ed8e024eeb3721 Your Name <you@example.com> 1413541961 +0800	commit: edit pop to first
+91eb404f5f6333ff4c8189b9d6ed8e024eeb3721 16da0156e9d90fd967a88efc903da812dc8d31d8 Your Name <you@example.com> 1413543297 +0800	commit: fixed HTMl escape ..
+16da0156e9d90fd967a88efc903da812dc8d31d8 428bb3613ac346920d3667e3f7251ae456714d12 Your Name <you@example.com> 1413549506 +0800	commit: pushobjects..
+428bb3613ac346920d3667e3f7251ae456714d12 d3878787584fed254d95f170950d3fceeb2172e4 Your Name <you@example.com> 1413551315 +0800	commit: got more init working
+d3878787584fed254d95f170950d3fceeb2172e4 976b92924545eea5ba9bbffed7b7f932db651b7f Your Name <you@example.com> 1413551898 +0800	commit: got more init working..
+976b92924545eea5ba9bbffed7b7f932db651b7f b0e600926b54b90713c60d8705a8ba4df930f58a Your Name <you@example.com> 1413552329 +0800	commit (amend): got more init working..
+b0e600926b54b90713c60d8705a8ba4df930f58a 30e540d429604b411d076bbde974cc69335ef305 Your Name <you@example.com> 1413554075 +0800	commit: got more working..
+30e540d429604b411d076bbde974cc69335ef305 84a9c6f6705f7dbbe1822ef2a033f7083f493d70 Your Name <you@example.com> 1413557562 +0800	commit: empty and default showAll
+84a9c6f6705f7dbbe1822ef2a033f7083f493d70 642d2c0ff781b5a5e30a763308fc014d4c1aeccd Your Name <you@example.com> 1413558328 +0800	commit (amend): empty and default showAll
+642d2c0ff781b5a5e30a763308fc014d4c1aeccd 27f247940a41827299d7fe86e417626fd761e1cd Your Name <you@example.com> 1413558775 +0800	commit: delete cancle create
+27f247940a41827299d7fe86e417626fd761e1cd 4b465eb819cac7ee4ea4e638bf7ae8c36372b648 Your Name <you@example.com> 1413595706 +0800	commit: add highlight
+4b465eb819cac7ee4ea4e638bf7ae8c36372b648 55602d47d35d627fb748a66c67173d0fcffa9f16 Your Name <you@example.com> 1413596860 +0800	commit (amend): add highlight
+55602d47d35d627fb748a66c67173d0fcffa9f16 ada27a28322f958c598f8fc5ac382e9713ff48a8 Your Name <you@example.com> 1413598457 +0800	commit: fix highlight - weried logic
+ada27a28322f958c598f8fc5ac382e9713ff48a8 4837ffbba653e491ec5ab1c209111e5559b7627a Your Name <you@example.com> 1413600268 +0800	commit: not result founded
+4837ffbba653e491ec5ab1c209111e5559b7627a 9ad17cf420806908e52288dd9b81b4fe858a1978 Your Name <you@example.com> 1413601719 +0800	commit: highlight css
+9ad17cf420806908e52288dd9b81b4fe858a1978 31c50c080ba1575c2591faaeb9bbe4aedb989fd7 Your Name <you@example.com> 1413601725 +0800	commit (amend): post-title css
+31c50c080ba1575c2591faaeb9bbe4aedb989fd7 c316ab545bce7a1799e531fad89cf4827a01c92f Your Name <you@example.com> 1413602266 +0800	commit: still more bug fixed
+c316ab545bce7a1799e531fad89cf4827a01c92f e69853b50566552efdfb53f47c034ccffd414115 Your Name <you@example.com> 1413604475 +0800	commit: fix single result edit
+e69853b50566552efdfb53f47c034ccffd414115 d5661c523276fc77d1e86237e8507d678706f0b1 Your Name <you@example.com> 1413606726 +0800	commit: fix search token
+d5661c523276fc77d1e86237e8507d678706f0b1 f1e497ecca69a0c3db770a06544006197c6c1ec6 Your Name <you@example.com> 1413607067 +0800	commit: fix get more if result less perpage
+f1e497ecca69a0c3db770a06544006197c6c1ec6 cbc80c77163e8bd13e9f353817df4d417fe924ba Your Name <you@example.com> 1413607952 +0800	commit (amend): fix get more if result less perpage
+cbc80c77163e8bd13e9f353817df4d417fe924ba c8ca89d43af8544db0ec624b11e572a87d2a9001 Your Name <you@example.com> 1413608196 +0800	commit: fix createNew,then click editpost
+c8ca89d43af8544db0ec624b11e572a87d2a9001 51132361832d2623256be48776393da8524363ba Your Name <you@example.com> 1413616860 +0800	commit: show more button
+51132361832d2623256be48776393da8524363ba 15987381409e1a5d87effbbe0a3077e3fd141c4b Your Name <you@example.com> 1413619475 +0800	commit: show more button~
+15987381409e1a5d87effbbe0a3077e3fd141c4b 2b4576a3dd015580aaa6f185889c0cdf07c7a0af Your Name <you@example.com> 1413622462 +0800	commit: show more works
+2b4576a3dd015580aaa6f185889c0cdf07c7a0af 9d689f4f1ee86362e1bf7f3b1ff13bd4a97ac9d5 Your Name <you@example.com> 1413622609 +0800	commit (amend): show more works
+9d689f4f1ee86362e1bf7f3b1ff13bd4a97ac9d5 e50cc34671807828f3ba653482b3551eb80f239c Your Name <you@example.com> 1413625955 +0800	commit (amend): show more works
+e50cc34671807828f3ba653482b3551eb80f239c 9a301c40ef65b858b9e575ad98e1e51873993b97 Your Name <you@example.com> 1413635369 +0800	commit (amend): show more works
+9a301c40ef65b858b9e575ad98e1e51873993b97 00c5eac8433d0a1070f75bbd1f8c53c68277ca01 Your Name <you@example.com> 1413635745 +0800	commit (amend): show more works

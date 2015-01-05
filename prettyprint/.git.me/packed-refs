@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled 
+70e37df4d6c925e000f0d5b20a95a9730a0e0611 refs/heads/back-win7-gupu-ttex
+6a5892e2165df9a1320b384dca1ad404d04d97f1 refs/heads/back-win7-yaojiao-ttex
+408602a4d12fe3c63471261b0c172c3311e25fcc refs/heads/back-win8-gupu-huitong
+6e04df6fcce9eac3e311a31844dbb9da4ef27094 refs/heads/back-win8-gupu-ttex
+8f97de3cbab7dff1565d7b50185a126dcd5f84a8 refs/heads/back-win8-yaojiao-huitong
+61858cc0f82da13ceff73ca739426178042cbf10 refs/heads/back-win8-yaojiao-ttex
+0891f5debcf939d7668c08aa2e47561553e73525 refs/heads/front-win8-beian-ems
+64c34f11536b69fdf0ee0089b46af312914c1e5f refs/heads/front-win8-yaojiao-huitong-editable

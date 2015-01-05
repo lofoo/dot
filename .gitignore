@@ -1,0 +1,17 @@
+#nodeJS
+node_modules
+
+#Windows
+Thumbs.db
+
+#Mac
+.DS_Store
+
+#shadowsocks config
+shadowdns.json
+config.json
+.config/ssocks/config.json
+.config/ssocks/*/config.json
+
+#Project
+private/

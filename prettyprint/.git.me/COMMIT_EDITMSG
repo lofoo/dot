@@ -1,0 +1,12 @@
+add trade.sold.get API with Ember
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch front-win8-yaojiao-huitong-editable
+# Changes to be committed:
+#	modified:   css/style.css
+#	modified:   index_template.firefox
+#	modified:   js/jsbin.js
+#	new file:   js/libs/md5.js
+#	new file:   js/libs/moment-with-locales.min.js
+#

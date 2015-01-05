@@ -1,0 +1,28 @@
+{
+  "name": "prettyprint",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "broccoli-asset-rev": "^0.0.17",
+    "broccoli-ember-hbs-template-compiler": "^1.5.0",
+    "ember-cli": "^0.0.40",
+    "ember-cli-ember-data": "^0.1.0",
+    "body-parser": "^1.6.2",
+    "ember-cli-ic-ajax": "^0.1.1",
+    "express": "^4.8.2",
+    "glob": "^3.2.11",
+    "gulp": "^3.8.7",
+    "gulp-webserver": "^0.6.0",
+    "originate": "^0.1.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-webserver": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

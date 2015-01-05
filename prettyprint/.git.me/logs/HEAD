@@ -1,0 +1,59 @@
+3d46af91b151b319b044717f327247c4abc4821e 61858cc0f82da13ceff73ca739426178042cbf10 Your Name <you@example.com> 1401462821 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 6092609167440fec1beea53a03372da33cdd3868 Your Name <you@example.com> 1401462854 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 0891f5debcf939d7668c08aa2e47561553e73525 Your Name <you@example.com> 1401462906 +0800	commit: v1
+0891f5debcf939d7668c08aa2e47561553e73525 61858cc0f82da13ceff73ca739426178042cbf10 Your Name <you@example.com> 1401462916 +0800	checkout: moving from front-win8-beian-ems to back-win8-yaojiao-ttex
+3d46af91b151b319b044717f327247c4abc4821e 8f97de3cbab7dff1565d7b50185a126dcd5f84a8 Your Name <you@example.com> 1401462960 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 6e04df6fcce9eac3e311a31844dbb9da4ef27094 Your Name <you@example.com> 1401463016 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 408602a4d12fe3c63471261b0c172c3311e25fcc Your Name <you@example.com> 1401463053 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 6a5892e2165df9a1320b384dca1ad404d04d97f1 Your Name <you@example.com> 1401463097 +0800	commit: v1
+3d46af91b151b319b044717f327247c4abc4821e 70e37df4d6c925e000f0d5b20a95a9730a0e0611 Your Name <you@example.com> 1401463131 +0800	commit: v1
+70e37df4d6c925e000f0d5b20a95a9730a0e0611 6a5892e2165df9a1320b384dca1ad404d04d97f1 Your Name <you@example.com> 1401463390 +0800	checkout: moving from back-win7-gupu-ttex to back-win7-yaojiao-ttex
+6a5892e2165df9a1320b384dca1ad404d04d97f1 408602a4d12fe3c63471261b0c172c3311e25fcc Your Name <you@example.com> 1401463396 +0800	checkout: moving from back-win7-yaojiao-ttex to back-win8-gupu-huitong
+408602a4d12fe3c63471261b0c172c3311e25fcc 6e04df6fcce9eac3e311a31844dbb9da4ef27094 Your Name <you@example.com> 1401463402 +0800	checkout: moving from back-win8-gupu-huitong to back-win8-gupu-ttex
+6e04df6fcce9eac3e311a31844dbb9da4ef27094 8f97de3cbab7dff1565d7b50185a126dcd5f84a8 Your Name <you@example.com> 1401463407 +0800	checkout: moving from back-win8-gupu-ttex to back-win8-yaojiao-huitong
+8f97de3cbab7dff1565d7b50185a126dcd5f84a8 61858cc0f82da13ceff73ca739426178042cbf10 Your Name <you@example.com> 1401463413 +0800	checkout: moving from back-win8-yaojiao-huitong to back-win8-yaojiao-ttex
+61858cc0f82da13ceff73ca739426178042cbf10 0891f5debcf939d7668c08aa2e47561553e73525 Your Name <you@example.com> 1401463419 +0800	checkout: moving from back-win8-yaojiao-ttex to front-win8-beian-ems
+0891f5debcf939d7668c08aa2e47561553e73525 6092609167440fec1beea53a03372da33cdd3868 Your Name <you@example.com> 1401463435 +0800	checkout: moving from front-win8-beian-ems to front-win8-yaojiao-huitong-editable
+6092609167440fec1beea53a03372da33cdd3868 0891f5debcf939d7668c08aa2e47561553e73525 Your Name <you@example.com> 1404369988 +0800	checkout: moving from front-win8-yaojiao-huitong-editable to front-win8-beian-ems
+0891f5debcf939d7668c08aa2e47561553e73525 6092609167440fec1beea53a03372da33cdd3868 Your Name <you@example.com> 1404370351 +0800	checkout: moving from front-win8-beian-ems to front-win8-yaojiao-huitong-editable
+6092609167440fec1beea53a03372da33cdd3868 0891f5debcf939d7668c08aa2e47561553e73525 Your Name <you@example.com> 1406119544 +0800	checkout: moving from front-win8-yaojiao-huitong-editable to front-win8-beian-ems
+0891f5debcf939d7668c08aa2e47561553e73525 6092609167440fec1beea53a03372da33cdd3868 Your Name <you@example.com> 1406119891 +0800	checkout: moving from front-win8-beian-ems to front-win8-yaojiao-huitong-editable
+6092609167440fec1beea53a03372da33cdd3868 680a0166f69523d09f040de0486aafa6cbf3224a Your Name <you@example.com> 1407333547 +0800	commit: ->.firefox & elasticSearch GET\!\!
+680a0166f69523d09f040de0486aafa6cbf3224a ab198a1dfd701e12453d6c6215e065acb5f11e6c Your Name <you@example.com> 1407579932 +0800	commit: fetch with sync,simple if(YaoJiao) select 'YaoJiao'
+ab198a1dfd701e12453d6c6215e065acb5f11e6c ab198a1dfd701e12453d6c6215e065acb5f11e6c Your Name <you@example.com> 1407580193 +0800	rebase -i (start): checkout 6092
+ab198a1dfd701e12453d6c6215e065acb5f11e6c ab198a1dfd701e12453d6c6215e065acb5f11e6c Your Name <you@example.com> 1407580195 +0800	rebase -i (finish): returning to refs/heads/front-win8-yaojiao-huitong-editable
+ab198a1dfd701e12453d6c6215e065acb5f11e6c 6092609167440fec1beea53a03372da33cdd3868 Your Name <you@example.com> 1407580253 +0800	rebase -i (start): checkout 6092
+6092609167440fec1beea53a03372da33cdd3868 680a0166f69523d09f040de0486aafa6cbf3224a Your Name <you@example.com> 1407580255 +0800	cherry-pick: fast-forward
+680a0166f69523d09f040de0486aafa6cbf3224a 3070a02701b6d40d30c90df0cafacb97b43bac65 Your Name <you@example.com> 1407580255 +0800	rebase -i (reword): ->.firefox & elasticSearch GET!
+3070a02701b6d40d30c90df0cafacb97b43bac65 7538d13e5faf039db0d55fd21ac6f4c8528b1467 Your Name <you@example.com> 1407580266 +0800	rebase -i (pick): fetch with sync,simple if(YaoJiao) select 'YaoJiao'
+7538d13e5faf039db0d55fd21ac6f4c8528b1467 7538d13e5faf039db0d55fd21ac6f4c8528b1467 Your Name <you@example.com> 1407580289 +0800	rebase -i (finish): returning to refs/heads/front-win8-yaojiao-huitong-editable
+7538d13e5faf039db0d55fd21ac6f4c8528b1467 57ebfc1aafe9dc45c1d0dd6d4817b01556185676 Your Name <you@example.com> 1407591095 +0800	commit (amend): using Ember.js newbie!! fetch with sync,simple if(YaoJiao) select 'YaoJiao'
+57ebfc1aafe9dc45c1d0dd6d4817b01556185676 d3d2f337524391f21215e05edd170b3e995c0444 Your Name <you@example.com> 1407591156 +0800	commit (amend): using Ember.js newbie!! fetch with sync,simple if(YaoJiao) select 'YaoJiao'
+d3d2f337524391f21215e05edd170b3e995c0444 71a99b751973df9cf8d17b612b8dea05555fd1e1 Your Name <you@example.com> 1407599788 +0800	commit (amend): using Ember.js newbie!! components dyncmic binding! fetch with sync,simple if(YaoJiao) select 'YaoJiao'
+71a99b751973df9cf8d17b612b8dea05555fd1e1 b676b1c969062aa882753b3beaafb992970b4d6f Your Name <you@example.com> 1408473961 +0800	commit: ember-bind
+b676b1c969062aa882753b3beaafb992970b4d6f f9029050e4c48943d335d1bbc794659fab721dc1 Your Name <you@example.com> 1408479448 +0800	commit: ember-bind-v2
+f9029050e4c48943d335d1bbc794659fab721dc1 8097415352b7cf5704b1a861aa300b8c64c3d7e0 Your Name <you@example.com> 1408485774 +0800	commit (amend): no dynmic bind-data,but text editable,and use Ember.select
+8097415352b7cf5704b1a861aa300b8c64c3d7e0 46e301d88b13807ef7c20d057b198503e0a1519a Your Name <you@example.com> 1408486031 +0800	commit (amend): no dynmic bind-data,but text editable,and use Ember.select
+46e301d88b13807ef7c20d057b198503e0a1519a b676b1c969062aa882753b3beaafb992970b4d6f Your Name <you@example.com> 1408486079 +0800	reset: moving to HEAD^
+b676b1c969062aa882753b3beaafb992970b4d6f 6eb254c25c212beb5f1b6521eccd17b571d667c7 Your Name <you@example.com> 1408486116 +0800	commit (amend): no dynmic bind,but text editable,and use Ember.select
+6eb254c25c212beb5f1b6521eccd17b571d667c7 71a99b751973df9cf8d17b612b8dea05555fd1e1 Your Name <you@example.com> 1408486193 +0800	checkout: moving from front-win8-yaojiao-huitong-editable to 71a9
+71a99b751973df9cf8d17b612b8dea05555fd1e1 6eb254c25c212beb5f1b6521eccd17b571d667c7 Your Name <you@example.com> 1408508791 +0800	checkout: moving from 71a99b751973df9cf8d17b612b8dea05555fd1e1 to front-win8-yaojiao-huitong-editable
+6eb254c25c212beb5f1b6521eccd17b571d667c7 d1daa94eb43410633c92747b84c976ced542018c Your Name <you@example.com> 1408513575 +0800	commit: selection works\!
+d1daa94eb43410633c92747b84c976ced542018c fc99e8eb9b1a63cefe9b44665bc7add0f1d32998 Your Name <you@example.com> 1408514788 +0800	commit: v2
+fc99e8eb9b1a63cefe9b44665bc7add0f1d32998 71a99b751973df9cf8d17b612b8dea05555fd1e1 Your Name <you@example.com> 1408514805 +0800	checkout: moving from front-win8-yaojiao-huitong-editable to 71a9
+71a99b751973df9cf8d17b612b8dea05555fd1e1 fc99e8eb9b1a63cefe9b44665bc7add0f1d32998 Your Name <you@example.com> 1408514896 +0800	checkout: moving from 71a99b751973df9cf8d17b612b8dea05555fd1e1 to front-win8-yaojiao-huitong-editable
+fc99e8eb9b1a63cefe9b44665bc7add0f1d32998 72c0a4839f058c4d6a16f93daae823ea1f08ba0d Your Name <you@example.com> 1408515404 +0800	commit (amend): v2
+72c0a4839f058c4d6a16f93daae823ea1f08ba0d 72c0a4839f058c4d6a16f93daae823ea1f08ba0d Your Name <you@example.com> 1408515562 +0800	rebase -i (start): checkout d1da
+72c0a4839f058c4d6a16f93daae823ea1f08ba0d 72c0a4839f058c4d6a16f93daae823ea1f08ba0d Your Name <you@example.com> 1408515564 +0800	rebase -i (finish): returning to refs/heads/front-win8-yaojiao-huitong-editable
+72c0a4839f058c4d6a16f93daae823ea1f08ba0d d1daa94eb43410633c92747b84c976ced542018c Your Name <you@example.com> 1408515668 +0800	rebase -i (start): checkout d1da^
+d1daa94eb43410633c92747b84c976ced542018c f73cc26c891aa3df765000ec1b17cd96b5268c65 Your Name <you@example.com> 1408515672 +0800	rebase -i (squash): selection works\!
+f73cc26c891aa3df765000ec1b17cd96b5268c65 f73cc26c891aa3df765000ec1b17cd96b5268c65 Your Name <you@example.com> 1408515703 +0800	rebase -i (finish): returning to refs/heads/front-win8-yaojiao-huitong-editable
+f73cc26c891aa3df765000ec1b17cd96b5268c65 5180a3ab97c0f3c70f237b4daa76f57641990f9f Your Name <you@example.com> 1408523895 +0800	commit (amend): selection works\!
+5180a3ab97c0f3c70f237b4daa76f57641990f9f 71a99b751973df9cf8d17b612b8dea05555fd1e1 Your Name <you@example.com> 1408524263 +0800	rebase -i (start): checkout 71a9
+71a99b751973df9cf8d17b612b8dea05555fd1e1 6eb254c25c212beb5f1b6521eccd17b571d667c7 Your Name <you@example.com> 1408524265 +0800	cherry-pick: fast-forward
+6eb254c25c212beb5f1b6521eccd17b571d667c7 e4d71610749a00cc790b27346184dd73f5b81cc6 Your Name <you@example.com> 1408524266 +0800	rebase -i (reword): dynmic bind,text editable,Ember.select,both three using Ember!
+e4d71610749a00cc790b27346184dd73f5b81cc6 2aa31154bb92ef1c979b00fac040341751b48616 Your Name <you@example.com> 1408524327 +0800	rebase -i (squash): dynmic bind,text editable,Ember.select,both three using Ember!
+2aa31154bb92ef1c979b00fac040341751b48616 2aa31154bb92ef1c979b00fac040341751b48616 Your Name <you@example.com> 1408524385 +0800	rebase -i (finish): returning to refs/heads/front-win8-yaojiao-huitong-editable
+2aa31154bb92ef1c979b00fac040341751b48616 8590fe61244ebfac84c856ad3ba67c5877229b21 Your Name <you@example.com> 1408524444 +0800	commit (amend): dynmic bind,text editable,Ember.select,both three using Ember!
+8590fe61244ebfac84c856ad3ba67c5877229b21 07c97e5d7e8ef12b9255b66c23438edd0208355c Your Name <you@example.com> 1408893367 +0800	commit: add trade.sold.get API with Ember
+07c97e5d7e8ef12b9255b66c23438edd0208355c 64c34f11536b69fdf0ee0089b46af312914c1e5f Your Name <you@example.com> 1408983839 +0800	commit (amend): add trade.sold.get API with Ember
